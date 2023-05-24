@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI TEST MACHINE</title>
+    <link rel="stylesheet" href="bmi.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1\dist\css\bootstrap.css">
+    <script src="jQuery-v3.4.1.js"></script>
+    
+</head>
+<body>
+
+    <div id="div-header">
+        <header align="center">
+            <h1 align="center">MAK HEALTHCARE</h1>
+            <h3 align="center">Test Your BMI here</h3>
+        </header>
+    </div>
+    <div id="div-bmi">
+    <form action="" method="post">
+        <table align="center" id="table-bmi">
+            <tr>
+                <td id="td-bmi" align="center">Mass</td>
+                <td><input type="number" id="bmass" placeholder="enter mass in kgs" value=""><i><small>kgs</small></i></td>
+            </tr>
+            <tr>
+                <td id="td-bmi" align="center">Height</td>
+                <td><input type="number" id="bheight" placeholder="height in centimetres" value=""><i><small>cm</small></i></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button
+                     type="button" 
+                     id="btn-test"
+                     onclick="bmiTest()" > BMI TEST </button>
+                    
+                </td>
+            </tr>
+        </table>
+        <table align="center" id="res-lt">
+            <tr>
+                <th>TEST RESULT</th>
+            </tr>
+            <tr>
+                <td>Your BMI is: <p id="bmiresult"></p></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div id="div-out">
+        <p id="dis-comment"></p>
+    </div>
+</body>
+<script>
+       function bmiTest(){
+           var mass, height, result, bmiComment ;
+           mass =document.getElementById("bmass").value;
+           height = document.getElementById("bheight").value;
+
+           result = mass/((height/100)^2) ;
+
+           document.getElementById ("bmiresult").innerHTML = result ;
+
+           if (result > 24.9 ) {
+               document.getElementById("dis-comment").innerHTML = 
+               "YOU HAVE EXCESS,<br> please visit a health consultant"
+               var w = document.getElementById("dis-comment");
+               w.style.fontSize = "16px";
+               w.style.color = "red";
+
+           }
+           else if ( result < 18.5 ){
+            document.getElementById("dis-comment").innerHTML = 
+               "YOU ARE UNDERWEIGHT,<br> please visit a health consultant"
+               var w = document.getElementById("dis-comment");
+               w.style.fontSize = "16px";
+               w.style.color = "red";
+
+           }
+           else {
+            document.getElementById("dis-comment").innerHTML = 
+               "YOU HAVE A NORMAL MASS,<br> You are heralthy"
+               var w = document.getElementById("dis-comment");
+               w.style.fontSize = "16px";
+               w.style.color = "green";
+
+           }
+       }
+</script>
+</html>

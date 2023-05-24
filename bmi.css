@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    border:none;
+}
+body{
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    /* background-attachment: inherit; */
+    
+}
+#div-header{
+    background-color: #2da1ff;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+}
+
+#div-bmi{
+    background-color: rgba(255, 255, 255, .7);
+    border: 5px solid;
+    border-color: #008cff;
+    position: relative;
+    padding: 20px;
+    align-items:  center;
+    margin: auto;
+    margin-top: 20px;
+    width: fit-content;
+    height:auto;
+}
+#btn-test{
+    background-color: #008cff;
+    color: white;
+    border:0;
+    /* font-weight: bold; */
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    height: auto;
+    width: auto;
+}
+#bmiresult{
+    color: rgb(1, 73, 43);
+    font-weight: bold;
+    /* color: #2da1ff; */
+    width: auto;
+}
+input{
+    background-color: transparent;
+    border-bottom: 2px solid #2da1ff;
+    height: 20px;
+}
+table{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#td-bmi-unit{
+    color: rgb(36, 36, 36);
+}
+#div-out{
+    background-color: #ecf1f1;
+    width: 100%;
+    min-height: 600px;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 0;
+}
